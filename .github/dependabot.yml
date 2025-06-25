@@ -5,25 +5,24 @@
 
 version: 2
 updates:
-  - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "gradle"
+    directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    # The 'groups' key needs to be at the same indentation level as 'schedule', 'labels', etc.
     groups:
       gradle-dependencies:
         patterns:
           - "*"
-
-   labels:
-    - "dependencies"
-    - "java"
-    - "gradle"
-    - "spring"
+    labels:
+      - "dependencies"
+      - "java"
+      - "gradle"
+      - "spring"
   - package-ecosystem: "github-actions"
-    # Actions are typically defined in .github/workflows/
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     labels:
       - "github-actions"
       - "dependencies"
