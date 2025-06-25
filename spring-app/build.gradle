@@ -21,6 +21,34 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Vulnerability in Apache Struts 2 (CVE-2017-5638) - Remote Code Execution
+    // This is a very old and well-known vulnerability, ideal for demonstration.
+    implementation 'org.apache.struts:struts2-core:2.3.31'
+
+    // Vulnerability in Jackson Databind (CVE-2019-12384) - Deserialization of Untrusted Data
+    // A popular library, often a source of vulnerabilities.
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.0'
+
+    // Vulnerability in Spring Framework (CVE-2016-5007) - Remote Code Execution (Spring BlazeDS MessageBroker)
+    // An older Spring vulnerability, useful for showing ecosystem issues.
+    implementation 'org.springframework:spring-core:4.3.0.RELEASE'
+
+    // Vulnerability in Apache Log4j 2 (CVE-2021-44228) - Log4Shell - Remote Code Execution
+    // One of the most severe vulnerabilities in recent years.
+    implementation 'org.apache.logging.log4j:log4j-core:2.14.1'
+
+    // Vulnerability in FasterXML jackson-databind (CVE-2020-36179) - Deserialization of Untrusted Data
+    // Another vulnerability in a widely used library.
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.0'
+
+    // Vulnerability in Bouncy Castle (CVE-2018-1000613) - Potential Information Disclosure
+    // A cryptographic library where vulnerabilities are particularly critical.
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.59'
+
+    // Vulnerability in commons-collections (CVE-2015-6420) - Deserialization of Untrusted Data
+    // A classic vulnerability exploited in many attacks.
+    implementation 'commons-collections:commons-collections:3.2.1'
 }
 
 tasks.named('test') {
